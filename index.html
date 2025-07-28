@@ -6,7 +6,7 @@
     <meta name="description" content="Premium Glass Installation for Residential and Commercial Projects. Specializing in high-end glass systems with precision, elegance, and innovation.">
     <meta name="author" content="LUMIN GLASS">
     <title>LUMIN GLASS - Premium Glass Solutions</title>
-    <meta http-equiv="refresh" content="0; url=home.html">
+
     <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
     <link rel="shortcut icon" href="favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
@@ -278,14 +278,13 @@
             <div class="subtitle-container">
                 <p class="subtitle">Elegant Glass. Expert Installation.</p>
                 <p class="subtitle-secondary">
-                    Premium glass solutions for residential, commercial, and architectural projects. 
-                    Precision, elegance, and innovation in every installation.
+                    Loading premium glass solutions...
                 </p>
             </div>
             
             <div class="button-container">
                 <a href="home.html" class="cta-button">
-                    <i class="fas fa-glass"></i> Explore Our Glass Solutions
+                    <i class="fas fa-arrow-right"></i> Enter Site
                 </a>
             </div>
         </section>
@@ -297,12 +296,16 @@
     </div>
 
     <script>
-        // Loading Screen
+        // Loading Screen with Auto Redirect
         window.addEventListener('load', () => {
             setTimeout(() => {
                 document.getElementById('loadingOverlay').style.opacity = '0';
                 setTimeout(() => {
                     document.getElementById('loadingOverlay').style.display = 'none';
+                    // Auto redirect after animation completes
+                    setTimeout(() => {
+                        window.location.href = 'home.html';
+                    }, 3000); // 3 seconds after page loads
                 }, 500);
             }, 1000);
         });
