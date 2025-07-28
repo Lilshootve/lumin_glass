@@ -1100,6 +1100,24 @@
             letter-spacing: 0.05em;
         }
         
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            align-items: center;
+        }
+        
+        .footer-link {
+            color: #B0C7D4;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-link:hover {
+            color: #CBA135;
+        }
+        
         .footer-contact {
             display: flex;
             flex-direction: column;
@@ -1383,9 +1401,11 @@
         <!-- Navigation -->
         <nav class="navbar" id="navbar">
             <div class="nav-container">
-                <img src="logo.png" alt="LUMIN GLASS" class="nav-logo" loading="lazy">
-                </div>
-                </nav>
+                <a href="home.html">
+                    <img src="logo.png" alt="LUMIN GLASS" class="nav-logo" loading="lazy">
+                </a>
+            </div>
+        </nav>
 
     <!-- Hero Section -->
         <section class="hero-section" id="home">
@@ -1501,73 +1521,73 @@
                 <div class="service-card">
                     <h3>Full-Scale Residential Glass Projects</h3>
                     <p>Complete glass integration in luxury residences: panoramic windows, doors, railings, showers, and facades.</p>
-                    <div class="service-price">$25,000 – $150,000+</div>
                     <ul class="service-features">
                         <li>High-ticket projects</li>
                         <li>Complete residential solutions</li>
                         <li>Premium clientele</li>
                         <li>Custom design & engineering</li>
                     </ul>
+                    <div class="service-price">$25,000 – $150,000+</div>
                 </div>
 
                 <div class="service-card">
                     <h3>Structural Glass Facades</h3>
                     <p>Architectural glass facades for residential, commercial buildings, and offices.</p>
-                    <div class="service-price">$15,000 – $90,000</div>
                     <ul class="service-features">
                         <li>High-impact visual appeal</li>
                         <li>Large glass volume</li>
                         <li>Technical design required</li>
                         <li>Structural engineering</li>
                     </ul>
+                    <div class="service-price">$15,000 – $90,000</div>
                 </div>
 
                 <div class="service-card">
                     <h3>Smart Glass Systems (Electrochromic)</h3>
                     <p>Glass that changes opacity/tint automatically or via remote control for privacy and energy efficiency.</p>
-                    <div class="service-price">$8,000 – $50,000</div>
                     <ul class="service-features">
                         <li>Innovative technology</li>
                         <li>Modern architecture</li>
                         <li>Functional luxury</li>
                         <li>Remote control operation</li>
                     </ul>
+                    <div class="service-price">$8,000 – $50,000</div>
                     </div>
 
                 <div class="service-card">
                     <h3>Glass Enclosures for Terraces & Balconies</h3>
                     <p>Elegant glass enclosures for outdoor spaces with climate protection and modern aesthetics.</p>
-                    <div class="service-price">$10,000 – $45,000</div>
                     <ul class="service-features">
                         <li>High residential demand</li>
                         <li>Transforms common areas to premium</li>
                         <li>Climate protection</li>
                         <li>Modern aesthetics</li>
                     </ul>
+                    <div class="service-price">$10,000 – $45,000</div>
             </div>
             
                 <div class="service-card">
                     <h3>Panoramic Window Installation</h3>
                     <p>Floor-to-ceiling windows that amplify natural light and exterior views.</p>
-                    <div class="service-price">$2,000 – $20,000</div>
                     <ul class="service-features">
                         <li>Highly valued in contemporary architecture</li>
                         <li>Especially in luxury homes</li>
                         <li>Maximum natural light</li>
                         <li>Stunning exterior views</li>
                     </ul>
+                    <div class="service-price">$2,000 – $20,000</div>
                 </div>
 
                 <div class="service-card">
                     <h3>Triple or Acoustic Glass Installation</h3>
                     <p>Glass systems with superior thermal and acoustic insulation, ideal for premium comfort.</p>
-                    <div class="service-price">$1,200 – $18,000</div>
                     <ul class="service-features">
                         <li>Energy efficiency</li>
                         <li>Premium comfort</li>
                         <li>High value perception</li>
                         <li>Superior insulation</li>
                     </ul>
+                    <div class="service-price">$1,200 – $18,000</div>
                         </div>
                     </div>
     </section>
@@ -2069,8 +2089,15 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-brand">
-                <img src="logo.png" alt="LUMIN GLASS" class="footer-logo" loading="lazy">
+                <a href="home.html">
+                    <img src="logo.png" alt="LUMIN GLASS" class="footer-logo" loading="lazy">
+                </a>
                 <p class="footer-tagline">Premium Glass Solutions</p>
+            </div>
+            
+            <div class="footer-links">
+                <a href="faq.html" class="footer-link">FAQ</a>
+                <a href="terms.html" class="footer-link">Terms & Conditions</a>
             </div>
             
             <div class="footer-contact">

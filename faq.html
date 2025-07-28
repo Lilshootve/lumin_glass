@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms and Conditions - LUMIN GLASS</title>
+    <title>FAQ - LUMIN GLASS</title>
     
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -75,6 +75,7 @@
             height: 80px;
             filter: drop-shadow(0 0 15px rgba(176, 199, 212, 0.4));
             transition: all 0.3s ease;
+            cursor: pointer;
         }
         
         .nav-logo:hover {
@@ -132,8 +133,8 @@
             font-weight: 400;
         }
         
-        /* Terms Content */
-        .terms-content {
+        /* FAQ Content */
+        .faq-content {
             background: rgba(15, 15, 15, 0.3);
             backdrop-filter: blur(15px);
             border-radius: 30px;
@@ -142,15 +143,27 @@
             margin-bottom: 3rem;
         }
         
-        .terms-section {
+        .faq-item {
             margin-bottom: 2.5rem;
+            padding: 2rem;
+            background: rgba(176, 199, 212, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(176, 199, 212, 0.1);
+            border-radius: 20px;
+            transition: all 0.3s ease;
         }
         
-        .terms-section:last-child {
+        .faq-item:hover {
+            background: rgba(176, 199, 212, 0.08);
+            border-color: rgba(176, 199, 212, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .faq-item:last-child {
             margin-bottom: 0;
         }
         
-        .section-number {
+        .faq-number {
             display: inline-block;
             background: linear-gradient(135deg, #CBA135 0%, #D4B847 100%);
             color: #000;
@@ -161,26 +174,19 @@
             margin-bottom: 1rem;
         }
         
-        .section-title {
+        .faq-question {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             font-weight: 600;
             color: #B0C7D4;
             margin-bottom: 1rem;
+            line-height: 1.4;
         }
         
-        .section-content {
+        .faq-answer {
             color: #888;
             line-height: 1.7;
             font-size: 1rem;
-        }
-        
-        .section-content p {
-            margin-bottom: 1rem;
-        }
-        
-        .section-content p:last-child {
-            margin-bottom: 0;
         }
         
         /* Contact Section */
@@ -301,8 +307,12 @@
                 padding: 100px 1rem 2rem;
             }
             
-            .terms-content {
+            .faq-content {
                 padding: 2rem;
+            }
+            
+            .faq-item {
+                padding: 1.5rem;
             }
             
             .whatsapp-chat {
@@ -323,21 +333,21 @@
 </head>
 <body>
     <!-- Navigation -->
-            <nav class="navbar">
-            <div class="nav-container">
-                <a href="home.html">
-                    <img src="logo.png" alt="LUMIN GLASS" class="nav-logo" loading="lazy">
-                </a>
-                <a href="home.html" class="back-btn">
-                    <i class="fas fa-arrow-left"></i>
-                    Back to Home
-                </a>
-            </div>
-        </nav>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="home.html">
+                <img src="logo.png" alt="LUMIN GLASS" class="nav-logo" loading="lazy">
+            </a>
+            <a href="home.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i>
+                Back to Home
+            </a>
+        </div>
+    </nav>
     
     <!-- WhatsApp Chatbot -->
     <div class="whatsapp-chat">
-        <a href="https://wa.me/14074012428?text=Hi! I have a question about your terms and conditions." target="_blank" class="whatsapp-btn">
+        <a href="https://wa.me/14074012428?text=Hi! I have a question about your services." target="_blank" class="whatsapp-btn">
             <i class="fab fa-whatsapp"></i>
             <span>Chat with us</span>
         </a>
@@ -347,113 +357,77 @@
     <div class="container">
         <!-- Header -->
         <header class="page-header">
-            <h1 class="page-title">Terms and Conditions</h1>
-            <p class="page-subtitle">LUMIN GLASS - Premium Glass Solutions</p>
+            <h1 class="page-title">FAQ</h1>
+            <p class="page-subtitle">Frequently Asked Questions - LUMIN GLASS</p>
         </header>
         
-        <!-- Terms Content -->
-        <div class="terms-content">
-            <div class="terms-section">
-                <div class="section-number">1</div>
-                <h2 class="section-title">Introduction</h2>
-                <div class="section-content">
-                    <p>Welcome to LUMIN GLASS. These Terms and Conditions govern your use of our website and services. By accessing or using our website, you agree to be bound by these terms.</p>
-                </div>
+        <!-- FAQ Content -->
+        <div class="faq-content">
+            <div class="faq-item">
+                <div class="faq-number">1</div>
+                <h3 class="faq-question">What types of glass do you offer?</h3>
+                <p class="faq-answer">We provide a wide range of premium glass, including tempered, laminated, acoustic, triple-pane, hurricane-resistant, and smart glass systems.</p>
             </div>
             
-            <div class="terms-section">
-                <div class="section-number">2</div>
-                <h2 class="section-title">Services</h2>
-                <div class="section-content">
-                    <p>LUMIN GLASS specializes in the design, fabrication, and installation of premium glass solutions, including but not limited to panoramic windows, frameless showers, glass railings, custom enclosures, and structural facades. All services are subject to prior quotation, scheduling, and site evaluation.</p>
-                </div>
+            <div class="faq-item">
+                <div class="faq-number">2</div>
+                <h3 class="faq-question">Do you handle custom projects?</h3>
+                <p class="faq-answer">Yes, all our projects are custom-designed. We work closely with clients, architects, and designers to create tailored solutions.</p>
             </div>
             
-            <div class="terms-section">
-                <div class="section-number">3</div>
-                <h2 class="section-title">Pricing and Estimates</h2>
-                <div class="section-content">
-                    <p>All pricing provided on this site is for informational purposes only. Final quotes may vary based on site conditions, custom specifications, and material availability. Estimates are valid for 15 days unless otherwise stated.</p>
-                </div>
+            <div class="faq-item">
+                <div class="faq-number">3</div>
+                <h3 class="faq-question">How long does an installation take?</h3>
+                <p class="faq-answer">Project timelines depend on size and complexity. Small installations like shower screens can take 1–2 days, while full residential projects may require several weeks.</p>
             </div>
             
-            <div class="terms-section">
-                <div class="section-number">4</div>
-                <h2 class="section-title">Appointments and Site Visits</h2>
-                <div class="section-content">
-                    <p>Consultations, measurements, and installations require prior appointments. The client is responsible for ensuring access to the property on the agreed date. Missed or canceled visits with less than 24 hours' notice may incur a fee.</p>
-                </div>
+            <div class="faq-item">
+                <div class="faq-number">4</div>
+                <h3 class="faq-question">Do you provide free consultations?</h3>
+                <p class="faq-answer">Yes, we offer free on-site consultations and preliminary quotes for most residential and commercial projects.</p>
             </div>
             
-            <div class="terms-section">
-                <div class="section-number">5</div>
-                <h2 class="section-title">Payments and Deposits</h2>
-                <div class="section-content">
-                    <p>A deposit is required to confirm project initiation. Full payment must be completed upon final delivery unless otherwise agreed in writing. We accept major credit cards, bank transfers, and approved digital payments.</p>
-                </div>
+            <div class="faq-item">
+                <div class="faq-number">5</div>
+                <h3 class="faq-question">What warranty do you offer?</h3>
+                <p class="faq-answer">Our installations include a 12-month workmanship warranty, while the glass itself carries the manufacturer's warranty (varies by product).</p>
             </div>
             
-            <div class="terms-section">
-                <div class="section-number">6</div>
-                <h2 class="section-title">Materials and Warranty</h2>
-                <div class="section-content">
-                    <p>We use high-quality, certified materials from trusted suppliers. A standard manufacturer warranty applies to materials used. Installation workmanship is guaranteed for a period of 12 months unless otherwise specified in the contract.</p>
-                </div>
+            <div class="faq-item">
+                <div class="faq-number">6</div>
+                <h3 class="faq-question">Do you work with architects or contractors?</h3>
+                <p class="faq-answer">Absolutely. We collaborate with architects, contractors, and interior designers to ensure seamless project execution.</p>
             </div>
             
-            <div class="terms-section">
-                <div class="section-number">7</div>
-                <h2 class="section-title">Project Timeline</h2>
-                <div class="section-content">
-                    <p>Estimated timelines are provided based on project scope. Delays due to weather, supply chain issues, or third-party conditions may affect delivery times. We will communicate all updates proactively.</p>
-                </div>
+            <div class="faq-item">
+                <div class="faq-number">7</div>
+                <h3 class="faq-question">Do you offer emergency services?</h3>
+                <p class="faq-answer">Yes, our 24/7 emergency glass service covers urgent repairs and replacements.</p>
             </div>
             
-            <div class="terms-section">
-                <div class="section-number">8</div>
-                <h2 class="section-title">Client Responsibilities</h2>
-                <div class="section-content">
-                    <p>Clients must secure the installation area, remove fragile items, and notify us of any construction-related hazards before the project begins.</p>
-                </div>
+            <div class="faq-item">
+                <div class="faq-number">8</div>
+                <h3 class="faq-question">What areas do you serve?</h3>
+                <p class="faq-answer">We currently serve Florida and surrounding regions. For large-scale projects, we may travel upon request.</p>
             </div>
             
-            <div class="terms-section">
-                <div class="section-number">9</div>
-                <h2 class="section-title">Limitation of Liability</h2>
-                <div class="section-content">
-                    <p>LUMIN GLASS is not liable for damages arising from misuse, post-installation modifications, or accidents unrelated to our work. Our liability is limited to the total value of the contracted service.</p>
-                </div>
+            <div class="faq-item">
+                <div class="faq-number">9</div>
+                <h3 class="faq-question">How are payments handled?</h3>
+                <p class="faq-answer">A deposit is required to schedule and confirm the project. Final payment is due upon completion. We accept bank transfers, major credit cards, and approved digital payment platforms.</p>
             </div>
             
-            <div class="terms-section">
-                <div class="section-number">10</div>
-                <h2 class="section-title">Intellectual Property</h2>
-                <div class="section-content">
-                    <p>All content, designs, and images on this site are property of LUMIN GLASS and may not be copied or used without written permission.</p>
-                </div>
-            </div>
-            
-            <div class="terms-section">
-                <div class="section-number">11</div>
-                <h2 class="section-title">Privacy</h2>
-                <div class="section-content">
-                    <p>We respect your privacy. Personal information collected through forms or communication is used solely to fulfill requests or provide service quotes and is never sold or shared with third parties.</p>
-                </div>
-            </div>
-            
-            <div class="terms-section">
-                <div class="section-number">12</div>
-                <h2 class="section-title">Changes to Terms</h2>
-                <div class="section-content">
-                    <p>LUMIN GLASS reserves the right to update these Terms and Conditions at any time. Continued use of the website constitutes acceptance of any changes.</p>
-                </div>
+            <div class="faq-item">
+                <div class="faq-number">10</div>
+                <h3 class="faq-question">Can I get a same-day quote?</h3>
+                <p class="faq-answer">For smaller projects, yes. For larger or custom installations, we provide detailed quotes within 24–48 hours after site evaluation.</p>
             </div>
         </div>
         
         <!-- Contact Section -->
         <div class="contact-section">
-            <h3>Questions About These Terms?</h3>
-            <p>If you have any questions about these Terms and Conditions, please don't hesitate to contact us.</p>
+            <h3>Still Have Questions?</h3>
+            <p>If you don't find the answer you're looking for, feel free to contact us directly.</p>
             <a href="mailto:info@luminglass.com" class="contact-email">info@luminglass.com</a>
         </div>
     </div>
