@@ -1,0 +1,29 @@
+{
+    "name": "LUMIN GLASS - Premium Glass Solutions",
+    "short_name": "LUMIN GLASS",
+    "description": "Premium Glass Installation for Residential and Commercial Projects",
+    "icons": [
+        {
+            "src": "favicon-96x96.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        },
+        {
+            "src": "apple-touch-icon.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        },
+        {
+            "src": "favicon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml"
+        }
+    ],
+    "theme_color": "#0F0F0F",
+    "background_color": "#0F0F0F",
+    "display": "standalone",
+    "start_url": "/",
+    "scope": "/",
+    "lang": "en",
+    "orientation": "portrait-primary"
+}
