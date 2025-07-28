@@ -62,6 +62,9 @@
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="Lumin Glass" />
     <link rel="manifest" href="site.webmanifest" />
+    <link rel="preload" href="logo.png" as="image" type="image/png">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap"></noscript>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/gotham" rel="stylesheet">
@@ -1153,7 +1156,7 @@
         <!-- Navigation -->
         <nav class="navbar" id="navbar">
             <div class="nav-container">
-                <img src="logo.png" alt="LUMIN GLASS" class="nav-logo">
+                <img src="logo.png" alt="LUMIN GLASS" class="nav-logo" loading="lazy">
                 </div>
                 </nav>
 
@@ -1717,12 +1720,12 @@
                 
                 <!-- Slider Navigation -->
                 <div class="slider-navigation">
-                    <button class="slider-btn prev-btn" id="prevBtn">
-                        <i class="fas fa-chevron-left"></i>
+                    <button class="slider-btn prev-btn" id="prevBtn" aria-label="Previous testimonials">
+                        <i class="fas fa-chevron-left" aria-hidden="true"></i>
                     </button>
                     <div class="slider-dots" id="sliderDots"></div>
-                    <button class="slider-btn next-btn" id="nextBtn">
-                        <i class="fas fa-chevron-right"></i>
+                    <button class="slider-btn next-btn" id="nextBtn" aria-label="Next testimonials">
+                        <i class="fas fa-chevron-right" aria-hidden="true"></i>
                     </button>
                 </div>
             </div>
@@ -2074,10 +2077,39 @@
         // Initialize particles when page loads
         window.addEventListener('load', () => {
             setTimeout(() => {
-                new ParticlesSystem();
-                new TestimonialsSlider();
+                try {
+                    new ParticlesSystem();
+                    new TestimonialsSlider();
+                } catch (error) {
+                    console.warn('Some features may not be available:', error);
+                }
             }, 500);
         });
+        
+        // Performance optimization: Intersection Observer for animations
+        if ('IntersectionObserver' in window) {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe elements for animation
+            document.querySelectorAll('.section').forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(20px)';
+                section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(section);
+            });
+        }
     </script>
 </body>
 </html> 
