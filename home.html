@@ -719,14 +719,58 @@
         
         /* Testimonials Section */
         .testimonials-hero {
-            margin-bottom: 4rem;
+            margin-bottom: 3rem;
         }
         
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        .testimonial-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #CBA135;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: #888;
+            font-weight: 500;
+        }
+        
+        /* Testimonials Slider */
+        .testimonials-slider-container {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        
+        .testimonials-slider {
+            display: flex;
+            transition: transform 0.5s ease;
             gap: 2rem;
-            margin-top: 2rem;
+        }
+        
+        .testimonial-card {
+            min-width: calc(33.333% - 1.33rem);
+            flex-shrink: 0;
+            background: rgba(176, 199, 212, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(176, 199, 212, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
         
         .testimonial-card {
@@ -794,6 +838,61 @@
             margin-bottom: 2rem;
             line-height: 1.7;
             font-size: 1rem;
+        }
+        
+        /* Slider Navigation */
+        .slider-navigation {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .slider-btn {
+            background: rgba(176, 199, 212, 0.1);
+            border: 1px solid rgba(176, 199, 212, 0.2);
+            color: #B0C7D4;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+        }
+        
+        .slider-btn:hover {
+            background: rgba(203, 161, 53, 0.2);
+            border-color: #CBA135;
+            color: #CBA135;
+            transform: scale(1.1);
+        }
+        
+        .slider-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        .slider-dots {
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        .slider-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(176, 199, 212, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .slider-dot.active {
+            background: #CBA135;
+            transform: scale(1.2);
         }
         
         .testimonial-author {
@@ -1255,20 +1354,21 @@
                     <div class="testimonial-stats">
                         <div class="stat-item">
                             <div class="stat-number">4.9</div>
-                            <div class="stat-label">Average Rating</div>
+                            <div class="stat-label">Rating</div>
                         </div>
                         <div class="stat-item">
                             <div class="stat-number">98%</div>
-                            <div class="stat-label">Satisfaction Rate</div>
+                            <div class="stat-label">Satisfaction</div>
                     </div>
                         <div class="stat-item">
                             <div class="stat-number">150+</div>
-                            <div class="stat-label">Happy Clients</div>
+                            <div class="stat-label">Clients</div>
                 </div>
                         </div>
                 </div>
 
-                <div class="testimonials-grid">
+                <div class="testimonials-slider-container">
+                    <div class="testimonials-slider" id="testimonialsSlider">
                     <div class="testimonial-card featured">
                         <div class="testimonial-header">
                             <div class="testimonial-stars">
@@ -1418,6 +1518,17 @@
                         </div>
                         </div>
                     </div>
+                </div>
+                
+                <!-- Slider Navigation -->
+                <div class="slider-navigation">
+                    <button class="slider-btn prev-btn" id="prevBtn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="slider-dots" id="sliderDots"></div>
+                    <button class="slider-btn next-btn" id="nextBtn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
                 </div>
             </div>
         </div>
@@ -1685,10 +1796,90 @@
             });
         });
 
+        // Testimonials Slider
+        class TestimonialsSlider {
+            constructor() {
+                this.slider = document.getElementById('testimonialsSlider');
+                this.prevBtn = document.getElementById('prevBtn');
+                this.nextBtn = document.getElementById('nextBtn');
+                this.dotsContainer = document.getElementById('sliderDots');
+                this.currentSlide = 0;
+                this.slides = this.slider.children;
+                this.totalSlides = this.slides.length;
+                this.slidesPerView = 3;
+                this.maxSlides = this.totalSlides - this.slidesPerView;
+                
+                this.init();
+            }
+            
+            init() {
+                this.createDots();
+                this.updateSlider();
+                this.addEventListeners();
+            }
+            
+            createDots() {
+                const totalDots = Math.ceil(this.totalSlides / this.slidesPerView);
+                for (let i = 0; i < totalDots; i++) {
+                    const dot = document.createElement('div');
+                    dot.className = 'slider-dot';
+                    if (i === 0) dot.classList.add('active');
+                    dot.addEventListener('click', () => this.goToSlide(i));
+                    this.dotsContainer.appendChild(dot);
+                }
+            }
+            
+            updateSlider() {
+                const translateX = -(this.currentSlide * (100 / this.slidesPerView));
+                this.slider.style.transform = `translateX(${translateX}%)`;
+                
+                // Update dots
+                const dots = this.dotsContainer.children;
+                for (let i = 0; i < dots.length; i++) {
+                    dots[i].classList.toggle('active', i === this.currentSlide);
+                }
+                
+                // Update buttons
+                this.prevBtn.disabled = this.currentSlide === 0;
+                this.nextBtn.disabled = this.currentSlide >= this.maxSlides;
+            }
+            
+            goToSlide(index) {
+                this.currentSlide = Math.max(0, Math.min(index, this.maxSlides));
+                this.updateSlider();
+            }
+            
+            nextSlide() {
+                if (this.currentSlide < this.maxSlides) {
+                    this.currentSlide++;
+                    this.updateSlider();
+                }
+            }
+            
+            prevSlide() {
+                if (this.currentSlide > 0) {
+                    this.currentSlide--;
+                    this.updateSlider();
+                }
+            }
+            
+            addEventListeners() {
+                this.prevBtn.addEventListener('click', () => this.prevSlide());
+                this.nextBtn.addEventListener('click', () => this.nextSlide());
+                
+                // Keyboard navigation
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'ArrowLeft') this.prevSlide();
+                    if (e.key === 'ArrowRight') this.nextSlide();
+                });
+            }
+        }
+        
         // Initialize particles when page loads
         window.addEventListener('load', () => {
             setTimeout(() => {
                 new ParticlesSystem();
+                new TestimonialsSlider();
             }, 500);
         });
     </script>
