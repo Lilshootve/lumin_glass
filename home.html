@@ -1329,11 +1329,119 @@
             .whatsapp-btn span {
                 display: none;
             }
+            
+            /* Mobile Testimonials Fix */
+            .testimonials-slider {
+                gap: 1rem;
+            }
+            
+            .testimonial-card {
+                width: calc(100% - 0.5rem);
+                padding: 1.5rem;
+                min-height: auto;
+            }
+            
+            .testimonial-text {
+                font-size: 0.9rem;
+                line-height: 1.5;
+            }
+            
+            .testimonial-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+            
+            .testimonial-type {
+                font-size: 0.7rem;
+                padding: 0.2rem 0.5rem;
+            }
+            
+            /* Mobile Service Cards Fix */
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .service-card {
+                padding: 1.5rem;
+            }
+            
+            .service-card h3 {
+                font-size: 1.2rem;
+            }
+            
+            .service-card p {
+                font-size: 0.9rem;
+            }
+            
+            .service-price {
+                font-size: 1.3rem;
+            }
+            
+            /* Mobile Background Fix */
+            body::before {
+                background: 
+                    radial-gradient(circle at 20% 80%, rgba(176, 199, 212, 0.15) 0%, transparent 50%),
+                    radial-gradient(circle at 80% 20%, rgba(203, 161, 53, 0.15) 0%, transparent 50%),
+                    radial-gradient(circle at 40% 40%, rgba(176, 199, 212, 0.08) 0%, transparent 50%);
+            }
+            
+            /* Mobile Section Background Fix */
+            .section {
+                background: rgba(15, 15, 15, 0.5);
+                backdrop-filter: blur(20px);
+            }
+            
+            .section-alt {
+                background: linear-gradient(135deg, rgba(176, 199, 212, 0.05) 0%, rgba(203, 161, 53, 0.05) 50%, rgba(176, 199, 212, 0.05) 100%);
+            }
         }
         
         @media (max-width: 480px) {
             .values-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            /* Extra Small Mobile Fixes */
+            .testimonial-card {
+                padding: 1rem;
+            }
+            
+            .testimonial-text {
+                font-size: 0.85rem;
+            }
+            
+            .service-card {
+                padding: 1rem;
+            }
+            
+            .service-card h3 {
+                font-size: 1.1rem;
+            }
+            
+            .service-card p {
+                font-size: 0.85rem;
+            }
+            
+            .section {
+                padding: 3rem 1rem;
+            }
+            
+            .hero-section {
+                padding: 6rem 1rem 3rem;
+            }
+            
+            .hero-title {
+                font-size: clamp(2rem, 7vw, 3rem);
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .hero-description {
+                font-size: 1rem;
             }
         }
         
