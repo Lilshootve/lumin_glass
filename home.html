@@ -761,7 +761,7 @@
         }
         
         .testimonial-card {
-            min-width: calc(33.333% - 1.33rem);
+            width: calc(33.333% - 1.33rem);
             flex-shrink: 0;
             background: rgba(176, 199, 212, 0.05);
             backdrop-filter: blur(10px);
@@ -2025,7 +2025,8 @@
             }
             
             updateSlider() {
-                const translateX = -(this.currentSlide * (100 / this.slidesPerView));
+                const slideWidth = 100 / this.slidesPerView;
+                const translateX = -(this.currentSlide * slideWidth);
                 this.slider.style.transform = `translateX(${translateX}%)`;
                 
                 // Update dots
