@@ -143,50 +143,62 @@
             margin-bottom: 3rem;
         }
         
-        .faq-item {
-            margin-bottom: 2.5rem;
-            padding: 2rem;
-            background: rgba(176, 199, 212, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(176, 199, 212, 0.1);
-            border-radius: 20px;
-            transition: all 0.3s ease;
+        .faq-section {
+            margin-bottom: 3rem;
         }
         
-        .faq-item:hover {
-            background: rgba(176, 199, 212, 0.08);
-            border-color: rgba(176, 199, 212, 0.2);
-            transform: translateY(-2px);
-        }
-        
-        .faq-item:last-child {
+        .faq-section:last-child {
             margin-bottom: 0;
         }
         
-        .faq-number {
-            display: inline-block;
+        .section-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
             background: linear-gradient(135deg, #CBA135 0%, #D4B847 100%);
             color: #000;
             font-weight: 700;
-            font-size: 0.9rem;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            margin-bottom: 1rem;
+            border-radius: 50%;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
         }
         
-        .faq-question {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.3rem;
-            font-weight: 600;
+        .section-title {
+            font-size: 1.5rem;
             color: #B0C7D4;
-            margin-bottom: 1rem;
-            line-height: 1.4;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
         }
         
-        .faq-answer {
+        .section-content {
             color: #888;
-            line-height: 1.7;
-            font-size: 1rem;
+            line-height: 1.8;
+        }
+        
+        .section-content p {
+            margin-bottom: 1rem;
+        }
+        
+        .section-content ul {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        .section-content li {
+            margin-bottom: 0.5rem;
+            color: #888;
+        }
+        
+        .section-content a {
+            color: #CBA135;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .section-content a:hover {
+            color: #D4B847;
         }
         
         /* Contact Section */
@@ -363,64 +375,84 @@
         
         <!-- FAQ Content -->
         <div class="faq-content">
-            <div class="faq-item">
-                <div class="faq-number">1</div>
-                <h3 class="faq-question">What types of glass do you offer?</h3>
-                <p class="faq-answer">We provide a wide range of premium glass, including tempered, laminated, acoustic, triple-pane, hurricane-resistant, and smart glass systems.</p>
+            <div class="faq-section">
+                <div class="section-number">1</div>
+                <h2 class="section-title">What types of glass do you offer?</h2>
+                <div class="section-content">
+                    <p>We provide a wide range of premium glass, including tempered, laminated, acoustic, triple-pane, hurricane-resistant, and smart glass systems.</p>
+                </div>
             </div>
             
-            <div class="faq-item">
-                <div class="faq-number">2</div>
-                <h3 class="faq-question">Do you handle custom projects?</h3>
-                <p class="faq-answer">Yes, all our projects are custom-designed. We work closely with clients, architects, and designers to create tailored solutions.</p>
+            <div class="faq-section">
+                <div class="section-number">2</div>
+                <h2 class="section-title">Do you handle custom projects?</h2>
+                <div class="section-content">
+                    <p>Yes, all our projects are custom-designed. We work closely with clients, architects, and designers to create tailored solutions.</p>
+                </div>
             </div>
             
-            <div class="faq-item">
-                <div class="faq-number">3</div>
-                <h3 class="faq-question">How long does an installation take?</h3>
-                <p class="faq-answer">Project timelines depend on size and complexity. Small installations like shower screens can take 1–2 days, while full residential projects may require several weeks.</p>
+            <div class="faq-section">
+                <div class="section-number">3</div>
+                <h2 class="section-title">How long does an installation take?</h2>
+                <div class="section-content">
+                    <p>Project timelines depend on size and complexity. Small installations like shower screens can take 1–2 days, while full residential projects may require several weeks.</p>
+                </div>
             </div>
             
-            <div class="faq-item">
-                <div class="faq-number">4</div>
-                <h3 class="faq-question">Do you provide free consultations?</h3>
-                <p class="faq-answer">Yes, we offer free on-site consultations and preliminary quotes for most residential and commercial projects.</p>
+            <div class="faq-section">
+                <div class="section-number">4</div>
+                <h2 class="section-title">Do you provide free consultations?</h2>
+                <div class="section-content">
+                    <p>Yes, we offer free on-site consultations and preliminary quotes for most residential and commercial projects.</p>
+                </div>
             </div>
             
-            <div class="faq-item">
-                <div class="faq-number">5</div>
-                <h3 class="faq-question">What warranty do you offer?</h3>
-                <p class="faq-answer">Our installations include a 12-month workmanship warranty, while the glass itself carries the manufacturer's warranty (varies by product).</p>
+            <div class="faq-section">
+                <div class="section-number">5</div>
+                <h2 class="section-title">What warranty do you offer?</h2>
+                <div class="section-content">
+                    <p>Our installations include a 12-month workmanship warranty, while the glass itself carries the manufacturer's warranty (varies by product).</p>
+                </div>
             </div>
             
-            <div class="faq-item">
-                <div class="faq-number">6</div>
-                <h3 class="faq-question">Do you work with architects or contractors?</h3>
-                <p class="faq-answer">Absolutely. We collaborate with architects, contractors, and interior designers to ensure seamless project execution.</p>
+            <div class="faq-section">
+                <div class="section-number">6</div>
+                <h2 class="section-title">Do you work with architects or contractors?</h2>
+                <div class="section-content">
+                    <p>Absolutely. We collaborate with architects, contractors, and interior designers to ensure seamless project execution.</p>
+                </div>
             </div>
             
-            <div class="faq-item">
-                <div class="faq-number">7</div>
-                <h3 class="faq-question">Do you offer emergency services?</h3>
-                <p class="faq-answer">Yes, our 24/7 emergency glass service covers urgent repairs and replacements.</p>
+            <div class="faq-section">
+                <div class="section-number">7</div>
+                <h2 class="section-title">Do you offer emergency services?</h2>
+                <div class="section-content">
+                    <p>Yes, our 24/7 emergency glass service covers urgent repairs and replacements.</p>
+                </div>
             </div>
             
-            <div class="faq-item">
-                <div class="faq-number">8</div>
-                <h3 class="faq-question">What areas do you serve?</h3>
-                <p class="faq-answer">We currently serve Florida and surrounding regions. For large-scale projects, we may travel upon request.</p>
+            <div class="faq-section">
+                <div class="section-number">8</div>
+                <h2 class="section-title">What areas do you serve?</h2>
+                <div class="section-content">
+                    <p>We currently serve Florida and surrounding regions. For large-scale projects, we may travel upon request.</p>
+                </div>
             </div>
             
-            <div class="faq-item">
-                <div class="faq-number">9</div>
-                <h3 class="faq-question">How are payments handled?</h3>
-                <p class="faq-answer">A deposit is required to schedule and confirm the project. Final payment is due upon completion. We accept bank transfers, major credit cards, and approved digital payment platforms.</p>
+            <div class="faq-section">
+                <div class="section-number">9</div>
+                <h2 class="section-title">How are payments handled?</h2>
+                <div class="section-content">
+                    <p>A deposit is required to schedule and confirm the project. Final payment is due upon completion. We accept bank transfers, major credit cards, and approved digital payment platforms.</p>
+                </div>
             </div>
             
-            <div class="faq-item">
-                <div class="faq-number">10</div>
-                <h3 class="faq-question">Can I get a same-day quote?</h3>
-                <p class="faq-answer">For smaller projects, yes. For larger or custom installations, we provide detailed quotes within 24–48 hours after site evaluation.</p>
+            <div class="faq-section">
+                <div class="section-number">10</div>
+                <h2 class="section-title">Can I get a same-day quote?</h2>
+                <div class="section-content">
+                    <p>For smaller projects, yes. For larger or custom installations, we provide detailed quotes within 24–48 hours after site evaluation.</p>
+                </div>
             </div>
         </div>
         

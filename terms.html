@@ -143,7 +143,7 @@
         }
         
         .terms-section {
-            margin-bottom: 2.5rem;
+            margin-bottom: 3rem;
         }
         
         .terms-section:last-child {
@@ -151,36 +151,53 @@
         }
         
         .section-number {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
             background: linear-gradient(135deg, #CBA135 0%, #D4B847 100%);
             color: #000;
             font-weight: 700;
-            font-size: 0.9rem;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            margin-bottom: 1rem;
+            border-radius: 50%;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
         }
         
         .section-title {
-            font-family: 'Cormorant Garamond', serif;
             font-size: 1.5rem;
-            font-weight: 600;
             color: #B0C7D4;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
         }
         
         .section-content {
             color: #888;
-            line-height: 1.7;
-            font-size: 1rem;
+            line-height: 1.8;
         }
         
         .section-content p {
             margin-bottom: 1rem;
         }
         
-        .section-content p:last-child {
-            margin-bottom: 0;
+        .section-content ul {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        .section-content li {
+            margin-bottom: 0.5rem;
+            color: #888;
+        }
+        
+        .section-content a {
+            color: #CBA135;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .section-content a:hover {
+            color: #D4B847;
         }
         
         /* Contact Section */
