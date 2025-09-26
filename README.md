@@ -55,7 +55,7 @@ This website is designed to be deployed on:
 
 ## 📞 Contact Information
 
-- **WhatsApp**: +1 (407) 401-2428
+- **WhatsApp**: +1 (407) 770 - 4553
 - **Email**: info@luminglass.com
 - **Service Area**: Orlando, FL & Surrounding Areas
 - **Hours**: 24/7 Emergency Service Available

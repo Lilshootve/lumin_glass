@@ -1,0 +1,291 @@
+/* Mobile Optimization CSS - LUMIN GLASS */
+
+/* Mobile-First Performance Optimizations */
+@media (max-width: 768px) {
+    /* Disable heavy animations on mobile for better performance */
+    body::before {
+        animation: none !important;
+    }
+    
+    .floating-glass {
+        display: none !important;
+    }
+    
+    #flares-canvas,
+    #particles-canvas {
+        display: none !important;
+    }
+    
+    /* Optimize touch interactions */
+    * {
+        -webkit-tap-highlight-color: transparent;
+    }
+    
+    /* Improve scrolling performance */
+    body {
+        -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
+    }
+    
+    /* Optimize images for mobile */
+    img {
+        max-width: 100%;
+        height: auto;
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+    
+    /* Better text rendering on mobile */
+    * {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+    }
+    
+    /* Optimize button interactions */
+    button,
+    a,
+    .cta-button,
+    .service-card,
+    .value-card,
+    .testimonial-card,
+    .pricing-card {
+        min-height: 44px;
+        touch-action: manipulation;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        user-select: none;
+    }
+    
+    /* Improve form elements */
+    input,
+    textarea,
+    select {
+        font-size: 16px !important; /* Prevents zoom on iOS */
+        touch-action: manipulation;
+    }
+    
+    /* Better spacing for mobile */
+    .container,
+    .section {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    /* Optimize grid layouts */
+    .grid,
+    .services-grid,
+    .values-grid,
+    .pricing-grid {
+        gap: 1rem;
+    }
+    
+    /* Improve card layouts */
+    .card,
+    .service-card,
+    .value-card,
+    .testimonial-card,
+    .pricing-card {
+        border-radius: 15px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Better typography scaling */
+    h1, .hero-title, .page-title {
+        font-size: clamp(1.8rem, 8vw, 3rem);
+        line-height: 1.1;
+    }
+    
+    h2, .section-title {
+        font-size: clamp(1.5rem, 6vw, 2.5rem);
+        line-height: 1.2;
+    }
+    
+    h3 {
+        font-size: clamp(1.2rem, 5vw, 1.8rem);
+        line-height: 1.3;
+    }
+    
+    p, .section-content {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+    
+    /* Optimize navigation */
+    .navbar {
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+    }
+    
+    .nav-logo {
+        width: 50px;
+        height: 50px;
+    }
+    
+    /* Better WhatsApp button */
+    .whatsapp-chat {
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+    }
+    
+    .whatsapp-btn {
+        padding: 12px 16px;
+        font-size: 0.9rem;
+        border-radius: 25px;
+        box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+    }
+    
+    .whatsapp-btn span {
+        display: none;
+    }
+    
+    /* Improve footer */
+    .footer {
+        padding: 2rem 1rem 1.5rem;
+        border-radius: 20px 20px 0 0;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .footer-logo {
+        width: 80px;
+        height: auto;
+    }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+    .container {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+    
+    .whatsapp-chat {
+        bottom: 15px;
+        right: 15px;
+    }
+    
+    .whatsapp-btn {
+        padding: 10px 14px;
+        font-size: 0.85rem;
+    }
+    
+    /* Even smaller text for very small screens */
+    h1, .hero-title, .page-title {
+        font-size: clamp(1.5rem, 9vw, 2.5rem);
+    }
+    
+    h2, .section-title {
+        font-size: clamp(1.3rem, 7vw, 2rem);
+    }
+    
+    p, .section-content {
+        font-size: 0.85rem;
+    }
+}
+
+/* Landscape Mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero-section {
+        min-height: auto;
+        padding: 4rem 1rem 2rem;
+    }
+    
+    .container {
+        padding: 4rem 1rem 2rem;
+    }
+    
+    /* Adjust for landscape orientation */
+    .cta-buttons {
+        flex-direction: row;
+        max-width: 500px;
+        gap: 1rem;
+    }
+    
+    .cta-button {
+        width: auto;
+        flex: 1;
+    }
+}
+
+/* High DPI Mobile Devices */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    /* Already dark theme, no changes needed */
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    body::before {
+        animation: none !important;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .whatsapp-chat,
+    .navbar {
+        display: none !important;
+    }
+    
+    body {
+        background: white !important;
+        color: black !important;
+    }
+    
+    .container {
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+}
+
+/* Accessibility Improvements */
+@media (prefers-contrast: high) {
+    .section-content,
+    .service-card p,
+    .value-card p,
+    .testimonial-text {
+        color: #ffffff !important;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    }
+    
+    .section-title,
+    .service-card h3,
+    .value-card h3 {
+        color: #ffffff !important;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    }
+}
+
+/* Focus styles for better accessibility */
+@media (max-width: 768px) {
+    .cta-button:focus,
+    .service-card:focus,
+    .value-card:focus,
+    .testimonial-card:focus,
+    .pricing-card:focus,
+    .whatsapp-btn:focus {
+        outline: 2px solid #CBA135;
+        outline-offset: 2px;
+    }
+} 
