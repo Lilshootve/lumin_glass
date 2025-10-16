@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Refund & Cancellation Policy for Lumin Glass LLC.">
+    <meta name="author" content="LUMIN GLASS">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://luminglass.com/refund-policy.html">
+    <meta property="og:title" content="Refund & Cancellation Policy - LUMIN GLASS">
+    <meta property="og:description" content="Refund & Cancellation Policy for Lumin Glass LLC.">
+    <meta property="og:image" content="https://luminglass.com/logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://luminglass.com/refund-policy.html">
+    <meta property="twitter:title" content="Refund & Cancellation Policy - LUMIN GLASS">
+    <meta property="twitter:description" content="Refund & Cancellation Policy for Lumin Glass LLC.">
+    <meta property="twitter:image" content="https://luminglass.com/logo.png">
+
+    <title>Refund & Cancellation Policy - LUMIN GLASS</title>
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Lumin Glass" />
+    <link rel="manifest" href="site.webmanifest" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/gotham" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Sora', sans-serif;
+            background: linear-gradient(135deg, #0F0F0F 0%, #1a1a1a 25%, #0F0F0F 50%, #1a1a1a 75%, #0F0F0F 100%);
+            color: white;
+            line-height: 1.6;
+            position: relative;
+            overflow-x: hidden;
+        }
+        
+        /* Animated Glassmorphism Background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(176, 199, 212, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(203, 161, 53, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(176, 199, 212, 0.05) 0%, transparent 50%);
+            animation: backgroundShift 20s ease-in-out infinite;
+            z-index: -1;
+        }
+        
+        @keyframes backgroundShift {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(30px, -30px) rotate(1deg); }
+            66% { transform: translate(-20px, 20px) rotate(-1deg); }
+        }
+        
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(15, 15, 15, 0.7);
+            backdrop-filter: blur(25px);
+            border-bottom: 1px solid rgba(176, 199, 212, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-logo {
+            width: 80px;
+            height: 80px;
+            filter: drop-shadow(0 0 15px rgba(176, 199, 212, 0.4));
+            transition: all 0.3s ease;
+        }
+        
+        .nav-logo:hover {
+            transform: scale(1.05);
+            filter: drop-shadow(0 0 25px rgba(176, 199, 212, 0.6));
+        }
+        
+        .back-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #B0C7D4;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.75rem 1.5rem;
+            border: 1px solid rgba(176, 199, 212, 0.3);
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .back-btn:hover {
+            background: rgba(176, 199, 212, 0.1);
+            border-color: #CBA135;
+            color: #CBA135;
+            transform: translateY(-2px);
+        }
+        
+        /* Main Content */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 8rem 2rem 4rem;
+        }
+        
+        .page-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .page-title {
+            font-family: 'Cormorant Garamond', 'Sora', serif;
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 700;
+            background: linear-gradient(135deg, #B0C7D4 0%, #8BA3B0 50%, #B0C7D4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+        
+        .page-subtitle {
+            font-size: 1.2rem;
+            color: #CBA135;
+            font-weight: 400;
+            letter-spacing: 0.05em;
+        }
+        
+        /* Policy Content */
+        .policy-content {
+            background: rgba(15, 15, 15, 0.3);
+            backdrop-filter: blur(15px);
+            border-radius: 30px;
+            border: 1px solid rgba(176, 199, 212, 0.1);
+            padding: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .policy-section {
+            margin-bottom: 2rem;
+        }
+        
+        .policy-section:last-child {
+            margin-bottom: 0;
+        }
+        
+        .section-title {
+            font-size: 1.5rem;
+            color: #B0C7D4;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .section-content {
+            color: #888;
+            line-height: 1.8;
+        }
+        
+        .section-content p {
+            margin-bottom: 1rem;
+        }
+        
+        .effective-date {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(176, 199, 212, 0.1);
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        /* WhatsApp Chatbot */
+        .whatsapp-chat {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .whatsapp-btn {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(37, 211, 102, 0.9);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(37, 211, 102, 0.3);
+            border-radius: 50px;
+            padding: 15px 20px;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 32px rgba(37, 211, 102, 0.3);
+        }
+        
+        .whatsapp-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(37, 211, 102, 0.4);
+            background: rgba(37, 211, 102, 1);
+        }
+        
+        .whatsapp-btn i {
+            font-size: 1.5rem;
+        }
+        
+        .whatsapp-btn span {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .whatsapp-btn:hover span {
+            display: inline;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateX(10px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        /* Footer */
+        .footer {
+            background: rgba(15, 15, 15, 0.8);
+            backdrop-filter: blur(25px);
+            border-top: 1px solid rgba(176, 199, 212, 0.2);
+            padding: 3rem 2rem 2rem;
+            margin-top: 4rem;
+            border-radius: 30px 30px 0 0;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 3rem;
+        }
+        
+        .footer-brand {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+        
+        .footer-logo {
+            width: 120px;
+            height: auto;
+            filter: drop-shadow(0 0 10px rgba(176, 199, 212, 0.3));
+        }
+        
+        .footer-tagline {
+            color: #CBA135;
+            font-size: 1.1rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+        }
+        
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            align-items: center;
+        }
+        
+        .footer-link {
+            color: #B0C7D4;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-link:hover {
+            color: #CBA135;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(176, 199, 212, 0.1);
+            color: #666;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 0.75rem 1rem;
+            }
+            .nav-logo {
+                width: 50px;
+                height: 50px;
+            }
+            .back-btn {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.9rem;
+            }
+            .container {
+                padding: 6rem 1rem 2rem;
+                max-width: 100%;
+            }
+            .policy-content {
+                padding: 1.5rem;
+                background: rgba(15, 15, 15, 0.8);
+                backdrop-filter: blur(25px);
+                border: 1px solid rgba(176, 199, 212, 0.2);
+                border-radius: 20px;
+            }
+            .section-title {
+                font-size: 1.3rem;
+                margin-bottom: 1rem;
+                color: #e0e0e0 !important;
+                text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+            }
+            .section-content {
+                color: #ccc !important;
+                font-size: 0.9rem;
+                line-height: 1.6;
+            }
+            .footer {
+                padding: 2rem 1rem 1.5rem;
+                border-radius: 20px 20px 0 0;
+            }
+            .footer-content {
+                flex-direction: column;
+                gap: 2rem;
+                text-align: center;
+            }
+            .footer-brand {
+                align-items: center;
+            }
+            .footer-logo {
+                width: 80px;
+            }
+            .footer-tagline {
+                font-size: 1rem;
+            }
+            .footer-link {
+                font-size: 0.85rem;
+            }
+            .footer-bottom {
+                margin-top: 1.5rem;
+                padding-top: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 5rem 0.75rem 2rem;
+            }
+            .policy-content {
+                padding: 1.25rem;
+            }
+            .whatsapp-chat {
+                bottom: 15px;
+                right: 15px;
+            }
+            .whatsapp-btn {
+                padding: 10px 14px;
+                font-size: 0.85rem;
+            }
+        }
+        
+        @media (max-width: 768px) and (orientation: landscape) {
+            .container {
+                padding: 4rem 1rem 2rem;
+            }
+            .page-title {
+                font-size: clamp(1.5rem, 5vw, 2rem);
+            }
+        }
+        
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            .nav-logo,
+            .footer-logo {
+                image-rendering: -webkit-optimize-contrast;
+                image-rendering: crisp-edges;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="home.html">
+                <img src="logo.png" alt="LUMIN GLASS" class="nav-logo" loading="lazy">
+            </a>
+            <a href="home.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i>
+                Back to Home
+            </a>
+        </div>
+    </nav>
+
+    <!-- WhatsApp Chatbot -->
+    <div class="whatsapp-chat">
+        <a href="https://wa.me/14077704553?text=Hi! I have a question about your refund policy." target="_blank" class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i>
+            <span>Chat with us</span>
+        </a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Header -->
+        <header class="page-header">
+            <h1 class="page-title">Refund & Cancellation Policy</h1>
+            <p class="page-subtitle">Lumin Glass LLC</p>
+        </header>
+
+        <!-- Policy Content -->
+        <div class="policy-content">
+            <div class="policy-section">
+                <div class="section-content">
+                    <p><strong>Company:</strong> Lumin Glass LLC</p>
+                    <p><strong>Website:</strong> <a href="https://www.luminglass.com" class="footer-link">www.luminglass.com</a></p>
+                    <p><strong>Effective Date:</strong> October 2025</p>
+                </div>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-title">Policy Statement</h2>
+                <div class="section-content">
+                    <p>At Lumin Glass LLC, we strive to ensure every client is satisfied with our products and services. Our projects involve the fabrication and installation of custom glass systems made specifically for each client’s project specifications.</p>
+                    <p>Because all materials are custom-ordered and fabricated to fit exact measurements, refunds are not typically available once production has begun.</p>
+                    <p>If a project is cancelled before material orders or fabrication start, a partial refund may be issued minus any design, administrative, or sourcing costs already incurred.</p>
+                    <p>Any refund or adjustment request must be submitted in writing to <a href="mailto:info@luminglass.com">info@luminglass.com</a> within 7 days of cancellation.</p>
+                    <p>In the rare event that a service issue arises, we will work directly with the client to correct or replace any defective work to ensure satisfaction and compliance with the agreed project scope.</p>
+                </div>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-title">Client Acknowledgement</h2>
+                <div class="section-content">
+                    <p>Clients confirm their understanding and acceptance of this policy by approving their invoice and project proposal via email prior to project start.</p>
+                </div>
+            </div>
+
+            <div class="effective-date">
+                <p><strong>Effective Date:</strong> October 2025</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="home.html">
+                    <img src="logo.png" alt="LUMIN GLASS" class="footer-logo" loading="lazy">
+                </a>
+                <p class="footer-tagline">Lumin Glass</p>
+            </div>
+            
+            <div class="footer-links">
+                <a href="faq.html" class="footer-link">FAQ</a>
+                <a href="terms.html" class="footer-link">Terms & Conditions</a>
+                <a href="privacy.html" class="footer-link">Privacy Policy</a>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 LUMIN GLASS — All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
